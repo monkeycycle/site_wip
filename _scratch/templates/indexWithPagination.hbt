@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+
+  <title>{{title}}</title>
+	<meta property="og:image" content="{{shareimg}}" />
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+
+
+  {{> header}}
+
+    <section class="container">
+
+      <article>
+        <h1>{{this.title}}</h1>
+        <ul class="post__tags">
+          {{#each this.tags }}
+            <li>
+              <a href="/tags/{{this}}.html" title="Posts sobre {{this}}">{{this}}</a>
+            </li>
+          {{/each}}
+        </ul>
+        <div class="post__body">
+          {{{contents}}}
+        </div>
+      </article>
+
+    </section>
+
+  {{> footer}}
+
+  </body>
+  </html>

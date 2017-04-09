@@ -1,0 +1,27 @@
+
+<div class="page-header">
+
+  <div class="site-identity">
+    <a href="/">
+      <span class="site-brand">
+        monkeycycle</span>
+      </span>
+
+      <span class="site-name">
+        Michael
+        <br />
+        Pereira
+      </span>
+    </a>
+  </div>
+
+  <nav class="nav nav-header" role="navigation">
+    <ul class="site-nav-menu menu-icon">
+      <li class="toggle-topbar hidden"><a href="#"><span>Menu</span></a></li>
+      <li><a href="/hello/">Hello!</a></li>
+      <li><a href="/posts/">Posts</a></li>
+      <li><a href="/projects/">Projects</a></li>
+    </ul>
+  </nav>
+
+</div>

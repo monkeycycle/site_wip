@@ -1,0 +1,41 @@
+
+/* sprite */
+
+.tags li a {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    text-indent: -9999px;
+    background: url('/gfx/interactive-type-icons-sprite.png') no-repeat top left;
+}
+
+.tags li a.chart            { background-position: 0 -407px; }
+.tags li a.network.graph    { background-position: 0 -456px; }
+.tags li a.slider           { background-position: 0 -770px; }
+.tags li a.map              { background-position: 0 -800px; }
+.tags li a.video            { background-position: 0 -850px; }
+
+
+.icon-Slider            { background-position: 0 0; width: 50px; height: 50px; }
+.icon-Map               { background-position: 0 -100px; width: 50px; height: 50px; }
+.icon-Video             { background-position: 0 -200px; width: 50px; height: 50px; }
+.icon-Map-Topo          { background-position: 0 -300px; width: 50px; height: 50px; }
+.icon-Line-Varied       { background-position: 0 -400px; width: 50px; height: 50px; }
+.icon-Treemap           { background-position: 0 -500px; width: 50px; height: 50px; }
+.icon-Line-Strong       { background-position: 0 -600px; width: 50px; height: 50px; }
+.icon-Network-Graph     { background-position: 0 -700px; width: 50px; height: 50px; }
+.icon-Column-Stacked    { background-position: 0 -800px; width: 50px; height: 50px; }
+.icon-Column-Grouped    { background-position: 0 -900px; width: 50px; height: 50px; }
+.icon-Pie               { background-position: 0 -1000px; width: 50px; height: 50px; }
+.icon-Sankay            { background-position: 0 -1100px; width: 50px; height: 50px; }
+.icon-Merge             { background-position: 0 -1200px; width: 50px; height: 50px; }
+.icon-Flow              { background-position: 0 -1300px; width: 50px; height: 50px; }
+.icon-Column            { background-position: 0 -1400px; width: 50px; height: 50px; }
+.icon-Chord             { background-position: 0 -1500px; width: 50px; height: 50px; }
+.icon-Bubble            { background-position: 0 -1600px; width: 50px; height: 50px; }
+.icon-Scatter           { background-position: 0 -1700px; width: 50px; height: 50px; }
+.icon-Area              { background-position: 0 -1800px; width: 50px; height: 50px; }
+/* sprite */

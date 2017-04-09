@@ -1,0 +1,85 @@
+
+/*
+*
+* Layout
+********************/
+
+.page {
+  background: $white;
+}
+
+.module {
+  @include span-columns(12 of 12);
+}
+
+.page-header {
+
+  @include outer-container;
+
+  .site-identity {
+    @include span-columns(10);
+  }
+
+  // .site-brand {
+  //   @include span-columns(3);
+  // }
+  //
+  // .site-name {
+  //   @include span-columns(3);
+  // }
+
+  .nav-header {
+    @include span-columns(2);
+  }
+
+}
+
+
+.page-body {
+
+  @include outer-container;
+
+  .module {
+    @include span-columns(3);
+  }
+
+  .module-frontmatter {
+    @include span-columns(12);
+    @include fill-parent();
+  }
+
+  .module-content {
+    @include span-columns(6);
+  }
+
+  .module-media_featured {
+    @include fill-parent();
+    text-align: center;
+  }
+
+}
+
+
+.page-footer {
+
+  @include outer-container;
+
+  .module {
+    @include span-columns(4);
+    height: rem(500px);
+  }
+
+  .feed-instagram {
+    @include omega();
+  }
+
+}
+
+
+
+
+
+
+
+/* Layout
+********************/

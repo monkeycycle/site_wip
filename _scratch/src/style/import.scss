@@ -1,0 +1,396 @@
+/* IMPORT */
+
+/* A generic CSS stylesheet */
+
+body {
+    font-family: arial, sans-serif;    
+    font-size: 1em;
+    color: #363636;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: arial, sans-serif;    
+}
+
+a, a:link, a:active, a:visited {
+    color: #104E8B !important;
+}
+
+a:hover,
+a:hover .site-name {
+    color: #009acd !important;
+}
+
+figure , 
+.image {
+    display: block;
+    float: left;
+    border: 1px solid #ccc;
+    margin: 0px; 
+    padding: 0px;
+    width: 100%;
+    height: auto;     
+}
+
+#header.contain-to-grid.sticky,
+.top-bar,
+#header  {
+    height: 110px;
+    background: #fff;
+}
+
+#header .name h1 a{
+    display: block;
+    float: left;
+    margin: 0px;
+    padding: 0px;    
+    color: #363636;
+    font-size: 26px;
+}
+
+.site-name {
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin: 0px;
+    padding: 60px 0px 0px 90px;
+    height: 100px;
+    color: #363636;
+    background: transparent url('/static/assets/gfx/monkeycycle-logo-100x100.png') top left no-repeat;
+}
+
+
+.site-logo {
+    display: block;
+    float: left;
+    margin: 0px;
+    padding: 80px 0px 0px 0px;
+    width: 100px;
+    height: 100px;
+    background: transparent url('/static/assets/gfx/monkeycycle-logo-100x100.png') top left no-repeat;
+}
+
+#header .site-logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#footer {
+    border-top: 1px solid #777;    
+    margin-top: 250px;
+    padding-top: 30px;
+    padding-bottom: 20px;    
+    background: #e5e5e5;
+    font-family: arial, sans-serif;
+}
+
+#footer .inline-list.social {
+    margin: 0px;
+    padding: 0px;
+    font-size: 26px;
+}
+
+#footer .inline-list.social li {
+    margin: 0px 20px 0px 0px;
+    padding: 0px;
+}
+
+.instagram-feed {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+    margin-top: 27px;
+}
+
+
+.page-content {
+    margin-top: 40px;
+}
+
+
+#content-listing {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    display: block;
+    float: left;
+    clear: both;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.project-header .page-title {
+    margin-top: 0px;
+}
+
+
+.content-listing-entry .page-title {
+    clear: both;
+    width: 100%;
+    height: 80px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px 0px 30px 0px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #363636;
+}
+
+
+
+
+.content-listing-entry {
+    overflow: hidden;
+    height: 300px;
+}
+
+
+
+
+.content-listing-entry .image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.content-listing-entry a:hover .page-title {
+    color: #009acd;
+}
+
+.project-details {
+    list-style-type: none;
+    font-size: 13px;
+    font-family: arial, sans-serif;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
+
+.project-header,
+#content-listing {
+    margin-top: 40px;
+}
+
+.section {
+    font-family: arial, sans-serif;
+    font-size: .8rem;
+    margin: 0px;    
+
+}
+
+.section a {
+    color: #009acd !important;
+}
+
+
+
+.tags,
+.work-project-awards {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+.work-project-awards li {
+    margin: 0px 10px 0px 0px;
+    font-weight: normal;
+}
+
+.work-project-type {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.project-body {
+    font-family: arial, sans-serif;
+}
+
+.work-production-notes {
+    color: #666666;
+    font-size: 12px;
+    font-family: arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* Project typer icons */
+.tags li {
+    display: block;
+    float: left;    
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+}
+
+.tags li a {
+    display: block;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+/* sprite */
+
+.tags li a {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    text-indent: -9999px;
+    background: url(/static/assets/gfx/interactive-type-icons-sprite.png) no-repeat top left;
+}
+
+
+
+.tags li a.chart            { background-position: 0 -407px; }
+.tags li a.network.graph    { background-position: 0 -456px; }
+.tags li a.slider           { background-position: 0 -770px; }
+.tags li a.map              { background-position: 0 -800px; }
+.tags li a.video            { background-position: 0 -850px; }
+
+
+
+
+.icon-Slider            { background-position: 0 0; width: 50px; height: 50px; } 
+.icon-Map               { background-position: 0 -100px; width: 50px; height: 50px; } 
+.icon-Video             { background-position: 0 -200px; width: 50px; height: 50px; } 
+.icon-Map-Topo          { background-position: 0 -300px; width: 50px; height: 50px; } 
+.icon-Line-Varied       { background-position: 0 -400px; width: 50px; height: 50px; } 
+.icon-Treemap           { background-position: 0 -500px; width: 50px; height: 50px; } 
+.icon-Line-Strong       { background-position: 0 -600px; width: 50px; height: 50px; } 
+.icon-Network-Graph     { background-position: 0 -700px; width: 50px; height: 50px; } 
+.icon-Column-Stacked    { background-position: 0 -800px; width: 50px; height: 50px; } 
+.icon-Column-Grouped    { background-position: 0 -900px; width: 50px; height: 50px; } 
+.icon-Pie               { background-position: 0 -1000px; width: 50px; height: 50px; } 
+.icon-Sankay            { background-position: 0 -1100px; width: 50px; height: 50px; } 
+.icon-Merge             { background-position: 0 -1200px; width: 50px; height: 50px; } 
+.icon-Flow              { background-position: 0 -1300px; width: 50px; height: 50px; } 
+.icon-Column            { background-position: 0 -1400px; width: 50px; height: 50px; } 
+.icon-Chord             { background-position: 0 -1500px; width: 50px; height: 50px; } 
+.icon-Bubble            { background-position: 0 -1600px; width: 50px; height: 50px; } 
+.icon-Scatter           { background-position: 0 -1700px; width: 50px; height: 50px; } 
+.icon-Area              { background-position: 0 -1800px; width: 50px; height: 50px; } 
+/* sprite */
+
+
+
+/* Project typer icons */
+
+
+/*
+#header,
+#footer {
+    display: block;
+    float: left;
+    clear: both;
+    background: #fff;     
+}
+
+
+#site-title {
+    font-size: 16px;
+    text-indent: 0px;
+}
+
+
+#site-tagline {
+    display: block;
+    float: left;
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+}
+
+.pages {
+    display: block;
+    float: left;
+    clear: both;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page-title {
+    display: block;
+    float: left;
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.thumbnail-image {
+    display: block;
+    float: left;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.caption {
+    display: block;
+    float: left;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.featured-image {
+    background: transparent;
+}
+
+
+
+#footer div .sitename {
+    font-size: 13px;
+    margin: 0px;
+}
+
+
+#footer div .site-logo  {
+    margin-right: 10px;
+}
+
+
+.project-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.project-header p,
+.project-header .page-title {
+    margin: 0px;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
+.project-header .page-title {
+    font-size: 26px;
+}
+
+
+h5.page-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+*/

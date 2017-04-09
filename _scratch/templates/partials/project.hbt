@@ -1,0 +1,65 @@
+<!-- PROJECT -->
+<div class="page-body page-project">
+
+  <div class="module-frontmatter">
+
+    <div class="module module-media module-media_featured aspect_16x9">
+      <img src="/images/{{image_featured}}" title="{{featured-image-caption}}" class="media__image" />
+    </div>
+
+  </div>
+
+  <div class="module module-content">
+
+    <h2 class="project-title">{{title}}</h2>
+    {{#if tags}}
+    <ul class="list_inline hidden">
+      {{#each tags}}
+      <li><a href="/topics/{{this}}">{{this}}</a></li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    {{{ contents }}}
+  </div>
+
+
+
+  <div class="module module-list work_notes">
+    <h5>Project details</h5>
+    <ul>
+      {{#if work_project_url}}
+      <li><a href="{{work_project_url}}">View</a></li>
+      {{/if}}
+      {{#if work_project_type}}
+      <li>{{work_project_type}}</li>
+      {{/if}} {{#if work_project_client}}
+      <li>{{work_project_client}}</li>
+      {{/if}}
+      {{#if work_project_pubdate}}
+      <li>{{work_project_pubdate}}</li>
+      {{/if}}
+    </ul>
+
+    <p>
+      {{work_production_notes}}
+    </p>
+
+  </div>
+
+
+
+  <div class="module module-list awards_recognition">
+    {{#if work_project_awards}}
+    <h5>Recognition</h5>
+    <ul>
+      {{#each work_project_awards}}
+      <li><a href="{{url}}">{{award}}</a></li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+
+
+</div>
+<!-- PROJECT -->
