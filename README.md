@@ -6,4 +6,7 @@ Static website using Metalsmith
 
 `metalsmith`
 
-`serve public/`  
+`serve public/`
+
+
+Forked and modified from https://github.com/1wheel/roadtolarissa
