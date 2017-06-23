@@ -4,7 +4,6 @@
   "dependencies": {
     "bourbon": "4.3.4",
     "bourbon-neat": "2.0.0",
-    "bulma": "0.4.2",
     "handlebars": "^2.0.0-alpha.2",
     "metalsmith": "^1.0.0",
     "metalsmith-ignore": "^0.1.2",
@@ -22,26 +21,19 @@
     "onchange": "3.2.1"
   },
   "scripts": {
-    "compile-scss": "node-sass app/scss/ -o dist/css/",
+    "compile-scss": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets/  app/scss/ -o dist/css/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "build:css": "npm run compile-scss && npm run autoprefixer",
-
     "lint": "eslint --no-eslintrc app/scripts/*.js",
     "uglify": "mkdir -p dist/js && uglifyjs app/scripts/*.js -m -o dist/js/app.js && uglifyjs app/scripts/*.js -m -c -o dist/js/app.min.js",
     "build:js": "npm run lint && npm run uglify",
-
     "imagemin": "imagemin app/gfx dist/gfx -p && imagemin app/media dist/media -p",
     "build:images": "npm run imagemin && npm run icons",
-
     "build:all": "metalsmith && npm run build:css && npm run build:js",
-
     "browser-sync:serve": "browser-sync start --server 'dist' --files 'dist/css/*.css, dist/js/*.js, dist/**/*.html'",
-
     "watch:css": "onchange 'app/scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'app/scripts/*.js' -- npm run build:js",
     "watch:all": "parallelshell 'npm run browser-sync:serve' 'npm run watch:css' 'npm run watch:js'",
-
-
     "start": "npm run build:all"
   }
 }

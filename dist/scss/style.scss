@@ -1,5 +1,6 @@
 
 @import "partials/variables";
+@import "bourbon";
 
 
 body {
@@ -38,4 +39,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $grey-darker;
+}
+
+
+h1 {
+  font-family: $helvetica;
+  font-size: golden-ratio(14px,  1);
 }
