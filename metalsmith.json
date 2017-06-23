@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "title": "My Blog",
-    "description": "My second, super-cool blog."
+    "title": "Michael Pereira | monkeycycle",
+    "description": ""
   },
-  "source": "source",
-  "destination": "public",
+  "source": "app",
+  "destination": "dist",
   "plugins": {
     "metalsmith-ignore": [
       "**/.DS_Store",
-      "unfinished/*", 
+      "unfinished/*",
       "javascripts/**.*"
     ],
     "metalsmith-metallic": true,
@@ -21,7 +21,7 @@
     },
     "metalsmith-sitemap":{
       "output": "sitemap.xml",
-      "hostname": "http://roadtolarissa.com"
+      "hostname": "http://monkeycycle.org"
     }
   }
 }

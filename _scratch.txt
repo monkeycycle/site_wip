@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="/style/style.css">
+<style>
+
+.list a{
+  width: 800px;
+  display: inline-block;
+}
+.list{
+  padding-bottom: 20px;
+}
+
+#gallery{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+svg{
+  margin: 0px auto;
+  display: block;
+  overflow: visible;
+}
+
+.border{
+  fill: rgba(0,0,0,0);
+  stroke: black;
+}
+
+text{
+  fill: white;
+}
+
+</style>
