@@ -1,4 +1,14 @@
 
+$neat-grid: (
+  columns: 12,
+  gutter: 20px,
+);
+
+$type-scale: 1.25; // major third
+
+$sans_serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Colours
 $white: #ffffff;
 $grey-lightest: #fefefe;
 $grey-lighter: #eeeeee;

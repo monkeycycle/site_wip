@@ -11,7 +11,9 @@
     "metalsmith-metallic": "^0.3.0",
     "metalsmith-permalinks": "^0.1.1",
     "metalsmith-sitemap": "^0.0.10",
-    "metalsmith-templates": "^0.6.1"
+    "metalsmith-start": "2.0.1",
+    "metalsmith-templates": "^0.6.1",
+    "node-refills": "1.0.1"
   },
   "devDependencies": {
     "eslint": "4.0.0",
@@ -21,7 +23,7 @@
     "onchange": "3.2.1"
   },
   "scripts": {
-    "compile-scss": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets/  app/scss/ -o dist/css/",
+    "compile-scss": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets/ --include-path node_modules/bourbon-neat/core/ app/scss/ -o dist/css/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "build:css": "npm run compile-scss && npm run autoprefixer",
     "lint": "eslint --no-eslintrc app/scripts/*.js",
@@ -29,11 +31,11 @@
     "build:js": "npm run lint && npm run uglify",
     "imagemin": "imagemin app/gfx dist/gfx -p && imagemin app/media dist/media -p",
     "build:images": "npm run imagemin && npm run icons",
-    "build:all": "metalsmith && npm run build:css && npm run build:js",
-    "browser-sync:serve": "browser-sync start --server 'dist' --files 'dist/css/*.css, dist/js/*.js, dist/**/*.html'",
+    "browser-sync:serve": "browser-sync start --server 'dist' --files '*.css, *.js, *.html'",
     "watch:css": "onchange 'app/scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'app/scripts/*.js' -- npm run build:js",
     "watch:all": "parallelshell 'npm run browser-sync:serve' 'npm run watch:css' 'npm run watch:js'",
-    "start": "npm run build:all"
+    "build:all": "metalsmith && npm run build:css && npm run build:js",
+    "start": "npm run build:all && npm run watch:all"
   }
 }

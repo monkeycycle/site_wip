@@ -1,48 +1,81 @@
 
 @import "partials/variables";
 @import "bourbon";
+@import "neat";
 
 
-body {
+html, body {
+  font-family: $sans_serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height:1.5;
   background-color: $grey-lightest;
-  color: $grey-darkest;
+  color: $grey-dark;
+}
+
+@media (min-width: 48em) {
+  html, body {
+    font-size: 14px;
+  }
 }
 
 
-.header {
 
+.page {
+  @include grid-container;
+  font-size: golden-ratio(12px,  1);
+}
+
+
+#page_header,
+#page_content,
+#page_footer {
+ @include grid-column(12);
+}
+
+
+#page_header {
+
+  margin-bottom: rem(40px);
+
+  .branding {
+    background: #999;
+  }
   .logo {
-
+    @include grid-column(1);
+    font-size: golden-ratio(8px,  1);
+    font-family: $sans_serif;
+    text-align: center;
+    text-decoration: none;
+  }
+  .nameplate {
+    @include grid-column(2);
+    text-decoration: none;
   }
 
-  .nav {
-
+  .tagline {
+    @include grid-column(5);
+    @include grid-push(3);
   }
 
 }
 
-.content {
 
-
-
-}
-
-
-.footer {
-  position: fixed;
-  bottom: -30px;
-  height: 80px;
+#page_footer {
   border-top: 1px solid $grey-dark;
   border-bottom: 10px solid $grey-darker;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $sans_serif;
   color: $grey-darker;
 }
 
 
-h1 {
-  font-family: $helvetica;
-  font-size: golden-ratio(14px,  1);
-}
+
+h1 { font-size: modular-scale(1rem, 5, $type-scale); }
+h2 { font-size: modular-scale(1rem, 4, $type-scale); }
+h3 { font-size: modular-scale(1rem, 3, $type-scale); }
+h4 { font-size: modular-scale(1rem, 2, $type-scale); }
+h5 { font-size: modular-scale(1rem, 1, $type-scale); }
+h6 { font-size: modular-scale(1rem, 0, $type-scale); }
