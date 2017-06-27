@@ -5,129 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="gfx/favicon.ico" type="image/x-icon">
   <title>monkeycycle | Michael Pereira</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Old+Standard+TT" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
   <div class="page">
-
     <div id="page_header">
 
       <div class="branding">
-        <div class="logo">
-          <a href="http://monkeycycle.org">
-            <img src="/gfx/monkeycycle-logo-100x100.png" width="100" height="100" alt="monkeycycle logo" />
-            <br />
-            <strong>monkeycycle</strong>
-          </a>
-        </div>
-        <div class="nameplate">
-          <h6><a href="http://monkeycycle.org">Michael Pereira</a></h6>
-        </div>
+            <a href="http://monkeycycle.org">
+              <img src="/gfx/monkeycycle-logo-100x100.png" width="100px" height="100px" alt="monkeycycle logo" />
+              <span class="nameplate">monkeycycle</span>
+            </a>
       </div>
 
       <div class="tagline">
-        data journalist &amp; developer
-        <p>I build and use tools to tell stories</p>
+        <h5>Michael Pereira</h5>
+        <h6>
+          data journalist &amp; developer
+        </h6>
+        <p>
+          I build and use tools to tell stories
+        </p>
       </div>
 
     </div>
 
-    <div id="page_content">
-      <h1>h1</h1>
-      <p>
-        This is a simple paragraph, just some words with a little <em>emphasis</em> thrown in and maybe a <strong>strong</strong> bolded word or <strong>two</strong>.
-      </p>
-      <h2>h2</h2>
-      <p>
-        This is another simple paragraph with absolutly nothing fancy about it.
-      </p>
-      <h3>h3</h3>
-      <ul>
-        <li>
-          A list item
-        </li>
-        <li>
-          A list item
-        </li>
-        <li>
-          A list item
-        </li>
-      </ul>
-      <h4>h4</h4>
-      <p>
-        This is another simple paragraph with absolutly nothing fancy about it.
-      </p>
+      <div class="gallery_grid">
 
-      <h5>h5</h5>
-      <ol>
-        <li>
-          A list item
-        </li>
-        <li>
-          A list item
-        </li>
-        <li>
-          A list item
-        </li>
-      </ol>
+        <div class="gallery_item">
 
-      <h6>h6</h6>
-      <p>
-        This is another simple paragraph with absolutly nothing fancy about it.
-      </p>
 
-      <dl>
-        <dt>
-          Term
-        </dt>
-        <dd>
-          Definition of this term
-        </dd>
-        <dt>
-          Another term
-        </dt>
-        <dd>
-          Definition of this other term
-        </dd>
-
-      </dl>
-      <p>
-        This is another simple paragraph with absolutly nothing fancy about it.
-      </p>
-
-      <div class="page-body row">
-        <h3>Projects</h3>
-        <div id="projects">
+          <div class="media"><picture>
+            <img src="/media/300/auto/no-fill/upscale/pipelines-3.png" />
+          </picture></div>
+          <h6>Pipeline map: Have there been any incidents near you?</h6>
 
         </div>
-      </div>
 
-      <div class="page-body row">
-        <h3>Notes</h3>
+        <div class="gallery_item">
+          <div class="media"><picture>
+            <img src="/media/300/auto/no-fill/upscale/canada-deficits_surpluses_1963-2014.png" />
+          </picture></div>
+          <h6>Canada's deficits and surpluses, 1963-2014</h6>
+        </div>
+
+        <div class="gallery_item">
+          <div class="media"><picture>
+            <img src="/media/300/auto/no-fill/upscale/AnatomyOfTerror.png" />
+          </picture></div>
+          <h6>9/11 - Anatomy of Terror</h6>
+        </div>
       </div>
 
     </div>
 
     <div id="page_footer">
 
-      <a href="http://twitter.com/__m_pereira">
-        twitter
-      </a>
+      <div class="page_footer_contact">
+        <h5>Michael Pereira | monkeycycle</h5>
+        <h6>
+          data journalist &amp; developer
+        </h6>
+        <p>
+          I build and use tools to tell stories
+        </p>
+        <a href="https://twitter.com/__m_pereira">Twitter</a>
+        <a href="https://github.com/monkeycycle">Github</a>
+      </div>
 
-      <a href="https://www.instagram.com/monkeycycle/">
-        instagram
-      </a>
+      <div class="feed_social" id="feed_twitter">
+        <a class="twitter-timeline" data-width="300" data-height="300" href="https://twitter.com/__m_pereira">Tweets by __m_pereira</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <div class="feed_social" id="feed_instagram">
+        <iframe src="//users.instush.com/bee-gallery-v2/?cols=3&rows=3&size=small&border=0&round=false&space=0&sl=false&bg=transparent&brd=false&na=false&pin=false&hc=e72476&ltc=3f3f3f&lpc=ffffff&fc=ffffff&user_id=5085249&username=monkeycycle&sid=-1&susername=-1&tag=-1&stype=mine&t=999999MeelUlNSESEn2FnbdSBp0ECNzB_z_D8KhGAMAzX1yXG7NqFfDMftM-D2v3s7CKheUy-k_vsi6QU" allowtransparency="true" frameborder="0" scrolling="no"  style="display:block;width:300px;height:300px;border:none;overflow:visible;" ></iframe>
+      </div>
 
     </div>
 
-
   </div>
-
 
 </body>
 
+
 <script type="text/javascript" src="/data/projects.js"></script>
+
+<script type="text/javascript" src="/scripts/vendor/handlebars.js"></script>
 <script type="text/javascript" src="/scripts/main.js"></script>
 
 </html>

@@ -1,0 +1,60 @@
+
+html, body {
+  font-family: $sans_serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height:1.5;
+  background-color: $grey-lightest;
+  color: $grey-dark;
+}
+
+@media (min-width: 48em) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans_serif;
+  color: $grey-darker;
+}
+
+h1 {
+  font-size: golden-ratio(24px,  1);
+}
+
+h2 {
+  font-size: golden-ratio(22px,  1);
+}
+
+h3 {
+  font-size: golden-ratio(18px,  1);
+}
+
+h4 {
+  font-size: golden-ratio(16px,  1);
+}
+
+h5 {
+  font-size: golden-ratio(14px,  1);
+}
+
+h6 {
+  font-size: golden-ratio(12px,  1);
+}
+
+
+p {
+  font-family: $serif;
+  font-size: golden-ratio(14px,  1);
+}
+
+
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration: none;
+  color: $grey-darkest;
+}
+
+a:hover, a:focus {
+  color: $grey;
+}

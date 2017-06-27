@@ -1,81 +1,121 @@
-
+@import "normalize";
 @import "partials/variables";
 @import "bourbon";
 @import "neat";
+@import "partials/typography";
+@import "partials/layout";
 
-
-html, body {
-  font-family: $sans_serif;
-  font-size: 16px;
-  font-style: normal;
-  line-height:1.5;
-  background-color: $grey-lightest;
-  color: $grey-dark;
-}
-
-@media (min-width: 48em) {
-  html, body {
-    font-size: 14px;
-  }
-}
-
-
-
-.page {
-  @include grid-container;
-  font-size: golden-ratio(12px,  1);
-}
-
-
-#page_header,
-#page_content,
-#page_footer {
- @include grid-column(12);
-}
 
 
 #page_header {
 
-  margin-bottom: rem(40px);
+  border-bottom: 1px solid $grey-lighter;
 
   .branding {
-    background: #999;
-  }
-  .logo {
-    @include grid-column(1);
+
     font-size: golden-ratio(8px,  1);
     font-family: $sans_serif;
-    text-align: center;
-    text-decoration: none;
-  }
-  .nameplate {
-    @include grid-column(2);
-    text-decoration: none;
+
+    a {
+      text-align: center !important;
+    }
+
+    img {
+      display: block;
+      float: left;
+
+    }
+
+
+
   }
 
+
   .tagline {
-    @include grid-column(5);
-    @include grid-push(3);
+    text-align: right;
+
+    padding-top: rem(55px);
+
+    h5 {
+      font-size: golden-ratio(11px,  1);
+      margin: 0;
+      line-height: 1;
+    }
+
+    h6 {
+      font-size: golden-ratio(9px,  1);
+      margin: rem(5px) 0 rem(10px) 0;
+      line-height: 1;
+    }
+
+    p {
+      font-size: golden-ratio(8px,  1);
+      line-height: 1;
+    }
+
   }
 
 }
+
+
+#page_body {
+
+  .gallery_grid {
+
+  }
+
+  .galltery_item {
+
+    border-bottom: 1px solid $grey-lighter;
+
+    .media {
+      display: block;
+      float: left;
+      border: 1px solid #000;
+    }
+
+    img {
+      display: inline-block;
+      float: left;
+      width: 50%;
+    }
+
+  }
+
+
+}
+
+
 
 
 #page_footer {
-  border-top: 1px solid $grey-dark;
-  border-bottom: 10px solid $grey-darker;
+
+  border-top: 1px solid $grey-light;
+  border-bottom: 20px solid $grey-darker;
+
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+
+  .page_footer_contact {
+    text-align: left;
+
+    h5 {
+      font-size: golden-ratio(11px,  1);
+      margin: 0;
+      line-height: 1;
+    }
+
+    h6 {
+      font-size: golden-ratio(9px,  1);
+      margin: rem(5px) 0 rem(10px) 0;
+      line-height: 1;
+    }
+
+    p {
+      font-size: golden-ratio(8px,  1);
+      line-height: 1;
+    }
+
+  }
+
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $sans_serif;
-  color: $grey-darker;
-}
-
-
-
-h1 { font-size: modular-scale(1rem, 5, $type-scale); }
-h2 { font-size: modular-scale(1rem, 4, $type-scale); }
-h3 { font-size: modular-scale(1rem, 3, $type-scale); }
-h4 { font-size: modular-scale(1rem, 2, $type-scale); }
-h5 { font-size: modular-scale(1rem, 1, $type-scale); }
-h6 { font-size: modular-scale(1rem, 0, $type-scale); }

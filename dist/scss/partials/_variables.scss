@@ -1,12 +1,41 @@
-
+// Responsive grid
 $neat-grid: (
   columns: 12,
   gutter: 20px,
 );
 
-$type-scale: 1.25; // major third
+$neat-grid-mobile: (
+  columns: 4,
+  gutter: 20px,
+  media: 300px,
+);
 
-$sans_serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$neat-grid-tablet: (
+  columns: 8,
+  gutter: 20px,
+  media: 720px,
+);
+
+$neat-grid-desktop: (
+  columns: 12,
+  gutter: 20px,
+  media: 1024px,
+);
+
+$neat-grid-desktop-large: (
+  columns: 12,
+  gutter: 40px,
+  media: 1200px,
+);
+
+
+
+// Typography
+$type-scale: 1.25; // major third
+$sans_serif: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "Old Standard TT", "Times New Roman", serif;
+
+
 
 // Colours
 $white: #ffffff;

@@ -1,0 +1,79 @@
+.page {
+  @include grid-container;
+}
+
+#page_header,
+#page_content,
+#page_footer {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#page_header {
+
+  @include grid-container;
+
+  margin-bottom: rem(20px);
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+
+  .branding {
+    @include grid-column(4);
+
+    @include grid-media($neat-grid-mobile){
+      @include grid-column(1);
+    }
+
+  }
+
+  .nameplate {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100px;
+  }
+
+  .tagline {
+    @include grid-column(8);
+
+    @include grid-media($neat-grid-mobile){
+      @include grid-column(3);
+    }
+
+  }
+
+}
+
+
+
+
+.gallery_list {
+  @include grid-column(12);
+}
+
+.gallery_item {
+  @include grid-column(4 of 12);
+  padding-bottom: rem(20px);
+}
+
+.media {
+  width: 100%;
+  height: rem(200px);
+  overflow: hidden;
+}
+
+
+
+
+#page_footer {
+
+  @include grid-container;
+
+  .page_footer_contact,
+  .feed_social {
+    @include grid-column(4 of 12);
+  }
+
+}
