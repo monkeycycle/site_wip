@@ -47,21 +47,32 @@
 }
 
 
+#page_body {
 
+  @include grid-container;
 
-.gallery_list {
-  @include grid-column(12);
-}
+  .gallery_list {
 
-.gallery_item {
-  @include grid-column(4 of 12);
-  padding-bottom: rem(20px);
-}
+  }
 
-.media {
-  width: 100%;
-  height: rem(200px);
-  overflow: hidden;
+  .gallery_item {
+    @include grid-column(4 of 12);
+    margin-bottom: rem(20px) !important;
+    padding-bottom: rem(20px) !important;
+
+    .media {
+      width: 100%;
+      height: rem(200px);
+      overflow: hidden;
+      margin: 0;
+    }
+
+    h6 {
+      margin: 5px 0 0 0;
+    }
+
+  }
+
 }
 
 

@@ -1,1 +1,1 @@
-(function(){console.log("Init Init");var o=data_projects.length;console.log("data_projects %o",data_projects);for(i=0;i<o;i++){var t=data_projects[i];console.log(i+" ::: "+t.title+" "+t.date);console.log(t.url)}})();
+(function(){var e=document.getElementById("gallery_projects");var t=data_projects.length;console.log("gallery_projectsEL %o",e);var r=document.getElementById("tmpl_gallery_item").innerHTML;var a=Handlebars.compile(r);for(i=0;i<t;i++){var l=data_projects[i];var n=a(l);e.insertAdjacentHTML("afterend",n)}})();

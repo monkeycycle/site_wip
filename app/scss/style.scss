@@ -9,8 +9,6 @@
 
 #page_header {
 
-  border-bottom: 1px solid $grey-lighter;
-
   .branding {
 
     font-size: golden-ratio(8px,  1);
@@ -26,15 +24,12 @@
 
     }
 
-
-
   }
-
 
   .tagline {
     text-align: right;
 
-    padding-top: rem(55px);
+    padding-top: rem(70px);
 
     h5 {
       font-size: golden-ratio(11px,  1);
@@ -44,7 +39,7 @@
 
     h6 {
       font-size: golden-ratio(9px,  1);
-      margin: rem(5px) 0 rem(10px) 0;
+      margin: 0;
       line-height: 1;
     }
 
@@ -60,24 +55,23 @@
 
 #page_body {
 
-  .gallery_grid {
+  .gallery_list {
 
   }
 
   .galltery_item {
 
-    border-bottom: 1px solid $grey-lighter;
+    background: $grey-lightest;
 
     .media {
       display: block;
       float: left;
-      border: 1px solid #000;
     }
 
     img {
-      display: inline-block;
+      display: block;
       float: left;
-      width: 50%;
+      width: auto;
     }
 
   }

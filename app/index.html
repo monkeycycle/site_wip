@@ -32,32 +32,46 @@
 
     </div>
 
-      <div class="gallery_grid">
+    <div id="page_body">
+      <div class="gallery_list" id="gallery_projects">
 
-        <div class="gallery_item">
 
-
-          <div class="media"><picture>
-            <img src="/media/300/auto/no-fill/upscale/pipelines-3.png" />
-          </picture></div>
-          <h6>Pipeline map: Have there been any incidents near you?</h6>
-
-        </div>
-
-        <div class="gallery_item">
-          <div class="media"><picture>
-            <img src="/media/300/auto/no-fill/upscale/canada-deficits_surpluses_1963-2014.png" />
-          </picture></div>
-          <h6>Canada's deficits and surpluses, 1963-2014</h6>
-        </div>
-
-        <div class="gallery_item">
-          <div class="media"><picture>
-            <img src="/media/300/auto/no-fill/upscale/AnatomyOfTerror.png" />
-          </picture></div>
-          <h6>9/11 - Anatomy of Terror</h6>
-        </div>
       </div>
+
+</div>
+
+      <div class="gallery_list" id="gallery_notes">
+
+        <div class="gallery_item">
+          <h6>This is a note tile</h6>
+          <p>
+            <b>SOme both meta</b> and non-bold meta
+          </p>
+          <p>
+            A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
+          </p>
+
+          <p>
+            A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
+          </p>
+        </div>
+
+        <div class="gallery_item">
+          <h6>This is a note tile</h6>
+          <p>
+            <b>SOme both meta</b> and non-bold meta
+          </p>
+          <p>
+            A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
+          </p>
+
+          <p>
+            A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
+          </p>
+        </div>
+
+      </div>
+
 
     </div>
 
@@ -89,6 +103,36 @@
 
 </body>
 
+<script id="tmpl_gallery_item" type="text/x-handlebars-template">​
+
+  <div class="gallery_item">
+    <div class="media">
+      <a href="#" class="link_modal" data-slug="{{slug}}">
+        <picture>
+          <img src="/media/300/auto/no-fill/upscale/{{lead_image}}" />
+        </picture>
+      </a>
+    </div>
+    <h6><a href="#" class="link_modal" data-slug="{{slug}}">{{title}}</a></h6>
+  </div>
+
+​</script>
+
+<script id="tmpl_gallery_item_detail" type="text/x-handlebars-template">​
+
+  <div class="gallery_item_detail">
+
+    <div class="media">
+      <picture>
+        <img src="/media/300/auto/no-fill/upscale/{{lead_image}}" />
+      </picture>
+    </div>
+
+    <h6>{{title}}</h6>
+    <b>{{publisher}}</b>
+  </div>
+
+​</script>
 
 <script type="text/javascript" src="/data/projects.js"></script>
 
