@@ -9,8 +9,6 @@
   padding: 0;
 }
 
-
-
 #page_header {
 
   @include grid-container;
@@ -52,6 +50,11 @@
   @include grid-container;
 
   .gallery_list {
+    @include grid-column(12 of 12);
+
+    @include grid-media($neat-grid-mobile) {
+      @include grid-column(12);
+    }
 
   }
 
@@ -59,6 +62,12 @@
     @include grid-column(4 of 12);
     margin-bottom: rem(20px) !important;
     padding-bottom: rem(20px) !important;
+
+
+    @include grid-media($neat-grid-mobile) {
+      @include grid-column(4);
+    }
+
 
     .media {
       width: 100%;
@@ -71,6 +80,14 @@
       margin: 5px 0 0 0;
     }
 
+    p {
+      margin: 0 0 5px 0;
+    }
+
+  }
+
+  #gallery_notes .gallery_item {
+    @include grid-column(6 of 12);
   }
 
 }
@@ -85,6 +102,11 @@
   .page_footer_contact,
   .feed_social {
     @include grid-column(4 of 12);
+
+    @include grid-media($neat-grid-mobile) {
+      @include grid-column(4);
+    }
+
   }
 
 }

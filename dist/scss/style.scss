@@ -55,13 +55,15 @@
 
 #page_body {
 
-  .gallery_list {
-
-  }
-
   .galltery_item {
 
-    background: $grey-lightest;
+    background: $grey-light;
+
+    p,
+    .date {
+      font-family: $sans_serif;
+      color: $grey;
+    }
 
     .media {
       display: block;

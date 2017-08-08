@@ -1,7 +1,7 @@
 
 html, body {
   font-family: $sans_serif;
-  font-size: 16px;
+  font-size: $base-font-size;
   font-style: normal;
   line-height:1.5;
   background-color: $grey-lightest;
@@ -10,7 +10,7 @@ html, body {
 
 @media (min-width: 48em) {
   html, body {
-    font-size: 14px;
+    font-size: $base-font-size;
   }
 }
 
@@ -20,35 +20,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: golden-ratio(24px,  1);
+  // font-size: golden-ratio(24px,  1);
+  font-size: modular-scale($base-font-size, 3, $type-of-scale)
 }
 
 h2 {
-  font-size: golden-ratio(22px,  1);
+  // font-size: golden-ratio(22px,  1);
+  font-size: modular-scale($base-font-size, 2.5, $type-of-scale)
 }
 
 h3 {
-  font-size: golden-ratio(18px,  1);
+  // font-size: golden-ratio(18px,  1);
+  font-size: modular-scale($base-font-size, 2, $type-of-scale)
 }
 
 h4 {
-  font-size: golden-ratio(16px,  1);
+  // font-size: golden-ratio(16px,  1);
+  font-size: modular-scale($base-font-size, 1.5, $type-of-scale)
 }
 
 h5 {
-  font-size: golden-ratio(14px,  1);
+  // font-size: golden-ratio(14px,  1);
+  font-size: modular-scale($base-font-size, 1.25, $type-of-scale)
 }
 
 h6 {
-  font-size: golden-ratio(12px,  1);
+  // font-size: golden-ratio(12px,  1);
+  font-size: modular-scale($base-font-size, 1, $type-of-scale)
 }
 
 
 p {
   font-family: $serif;
-  font-size: golden-ratio(14px,  1);
+  // font-size: golden-ratio(14px,  1);
+  font-size: modular-scale($base-font-size, .8, $type-of-scale)
 }
-
 
 a, a:hover, a:active, a:visited, a:focus {
   text-decoration: none;

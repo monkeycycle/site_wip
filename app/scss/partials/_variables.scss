@@ -31,7 +31,11 @@ $neat-grid-desktop-large: (
 
 
 // Typography
+$base-font-size: 16px;
+$golden: 1.618;
 $type-scale: 1.25; // major third
+$type-of-scale: $golden;
+
 $sans_serif: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif: "Old Standard TT", "Times New Roman", serif;
 

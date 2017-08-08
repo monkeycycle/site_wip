@@ -4,7 +4,9 @@
   "dependencies": {
     "bourbon": "4.3.4",
     "bourbon-neat": "2.0.0",
-    "copy": "0.3.0",
+    "node-refills": "1.0.1",
+    "normalize.css": "7.0.0",
+    "wiredep-cli": "0.1.0",
     "handlebars": "^2.0.0-alpha.2",
     "metalsmith": "^1.0.0",
     "metalsmith-ignore": "^0.1.2",
@@ -13,20 +15,18 @@
     "metalsmith-permalinks": "^0.1.1",
     "metalsmith-sitemap": "^0.0.10",
     "metalsmith-start": "2.0.1",
-    "metalsmith-templates": "^0.6.1",
-    "node-refills": "1.0.1",
-    "normalize.css": "7.0.0",
-    "wiredep-cli": "0.1.0"
+    "metalsmith-templates": "^0.6.1"
   },
   "devDependencies": {
     "eslint": "4.0.0",
+    "copy": "0.3.0",
+    "gm": "1.23.0",
     "node-sass": "4.5.3",
     "node-sass-magic-importer": "4.1.5",
     "nodemon": "1.11.0",
     "onchange": "3.2.1"
   },
   "scripts": {
-
     "compile-scss": "node-sass --include-path node_modules/normalize.css/ --include-path node_modules/bourbon/app/assets/stylesheets/ --include-path node_modules/bourbon-neat/core/ app/scss/ -o dist/css/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "build:css": "npm run compile-scss && npm run autoprefixer",
@@ -34,8 +34,12 @@
     "uglify": "mkdir -p dist/js && uglifyjs app/scripts/*.js -m -o dist/js/app.js && uglifyjs app/scripts/*.js -m -c -o dist/js/app.min.js",
     "copy_vendor_scripts": "copy './node_modules/handlebars/dist/*.js' 'dist/scripts/vendor'",
     "build:js": "npm run lint && npm run uglify",
-
     "copy_html": "copy 'app/**/*.html' 'dist'",
+    "image_300": "image-batch-resizer -d ./app/media -s 300 --prefix '300_'",
+    "image_460": "image-batch-resizer -d ./app/media -s 300 --prefix '460_'",
+    "image_640": "image-batch-resizer -d ./app/media -s 300 --prefix '640_'",
+    "image_1024": "image-batch-resizer -d ./app/media -s 300 --prefix '1024_'",
+    "image_resizing": "npm run image_300 && npm run image_460 && npm run image_640 && npm run image_1024",
     "imagemin": "imagemin app/gfx dist/gfx -p && imagemin app/media dist/media -p",
     "build:images": "npm run imagemin && npm run icons",
     "watch:css": "onchange 'app/scss/*.scss' -- npm run build:css",
@@ -43,7 +47,8 @@
     "watch:html": "onchange 'app/**/*.html' -- npm run html",
     "browser-sync:serve": "browser-sync start --server 'dist' --files '*.css, *.js, *.html'",
     "watch:all": "parallelshell 'npm run browser-sync:serve' 'npm run watch:css' 'npm run watch:js'",
-    "build:all": "metalsmith && npm run build:css && npm run build:js && npm run copy_html && npm run copy_vendor_scripts",
-    "start": "npm run build:all && npm run watch:all"
+    "build_all": "metalsmith && npm run build:css && npm run build:js && npm run copy_html && npm run copy_vendor_scripts",
+    "start": "parallelshell 'npm run build_all' 'npm run browser-sync:serve' 'npm run watch:css' 'npm run watch:js'"
+
   }
 }

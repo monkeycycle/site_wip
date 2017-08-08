@@ -38,14 +38,14 @@
 
       </div>
 
-</div>
+    </div>
 
-      <div class="gallery_list" id="gallery_notes">
+    <div class="gallery_list" id="gallery_notes">
 
         <div class="gallery_item">
-          <h6>This is a note tile</h6>
+          <h4>This is a note tile</h4>
           <p>
-            <b>SOme both meta</b> and non-bold meta
+            <b>Some both meta</b> and non-bold meta
           </p>
           <p>
             A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
@@ -57,9 +57,9 @@
         </div>
 
         <div class="gallery_item">
-          <h6>This is a note tile</h6>
+          <h4>This is a note tile</h4>
           <p>
-            <b>SOme both meta</b> and non-bold meta
+            <b>Some both meta</b> and non-bold meta
           </p>
           <p>
             A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here. A graf or two about this thing right here.
@@ -106,14 +106,19 @@
 <script id="tmpl_gallery_item" type="text/x-handlebars-template">​
 
   <div class="gallery_item">
+<!--
     <div class="media">
       <a href="#" class="link_modal" data-slug="{{slug}}">
         <picture>
-          <img src="/media/300/auto/no-fill/upscale/{{lead_image}}" />
+          <img src="/media/{{lead_image}}" />
         </picture>
       </a>
     </div>
+ -->
     <h6><a href="#" class="link_modal" data-slug="{{slug}}">{{title}}</a></h6>
+    <p>
+      <b class="note_meta">{{publisher}}</b>
+    </p>
   </div>
 
 ​</script>
@@ -121,13 +126,13 @@
 <script id="tmpl_gallery_item_detail" type="text/x-handlebars-template">​
 
   <div class="gallery_item_detail">
-
+<!--
     <div class="media">
       <picture>
         <img src="/media/300/auto/no-fill/upscale/{{lead_image}}" />
       </picture>
     </div>
-
+ -->
     <h6>{{title}}</h6>
     <b>{{publisher}}</b>
   </div>

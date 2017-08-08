@@ -14,9 +14,10 @@
 
     var project = data_projects[i];
 
-    var html    = hbs_card(project);
-
-    gallery_projectsEL.insertAdjacentHTML('afterend', html);
+    if(project.publish == 'y'){
+      var markup_element    = hbs_card(project);
+      gallery_projectsEL.insertAdjacentHTML('afterend', markup_element);
+    }
 
   }
 

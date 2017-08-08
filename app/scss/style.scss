@@ -11,7 +11,8 @@
 
   .branding {
 
-    font-size: golden-ratio(8px,  1);
+    font-size: modular-scale($base-font-size, .7, $type-of-scale);
+    // font-size: golden-ratio(8px,  1);
     font-family: $sans_serif;
 
     a {
@@ -29,22 +30,23 @@
   .tagline {
     text-align: right;
 
-    padding-top: rem(70px);
+    padding-top: rem(50px);
 
     h5 {
-      font-size: golden-ratio(11px,  1);
+
+      // font-size: golden-ratio(11px,  1);
       margin: 0;
       line-height: 1;
     }
 
     h6 {
-      font-size: golden-ratio(9px,  1);
+      // font-size: golden-ratio(9px,  1);
       margin: 0;
       line-height: 1;
     }
 
     p {
-      font-size: golden-ratio(8px,  1);
+      // font-size: golden-ratio(8px,  1);
       line-height: 1;
     }
 
@@ -55,13 +57,15 @@
 
 #page_body {
 
-  .gallery_list {
-
-  }
-
   .galltery_item {
 
-    background: $grey-lightest;
+    background: $grey-light;
+
+    p,
+    .date {
+      font-family: $sans_serif;
+      color: $grey;
+    }
 
     .media {
       display: block;
@@ -94,19 +98,19 @@
     text-align: left;
 
     h5 {
-      font-size: golden-ratio(11px,  1);
+      // font-size: golden-ratio(11px,  1);
       margin: 0;
       line-height: 1;
     }
 
     h6 {
-      font-size: golden-ratio(9px,  1);
+      // font-size: golden-ratio(9px,  1);
       margin: rem(5px) 0 rem(10px) 0;
       line-height: 1;
     }
 
     p {
-      font-size: golden-ratio(8px,  1);
+      // font-size: golden-ratio(8px,  1);
       line-height: 1;
     }
 
